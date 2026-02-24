@@ -44,3 +44,13 @@ When I ran **ESLint** on my codebase, it detected several common issues:
 * **Missing Semicolons:** Several lines were missing termination, which can lead to rare but frustrating bugs
 
 Yes, significantly. After using and running **Prettier**, it automatically formatted my code to be consistent with the project's style guidelines. This not only made my code look cleaner but also improved readability. It saved me time that I would have spent manually fixing formatting issues, allowing me to focus more on the logic and functionality of my code rather than worrying about style inconsistencies.
+
+## Issue 49: Reflection
+
+A good naming convention is crucial for code readability and maintainability. It should tell the reader why it exists, what it does, and how it should be used. 
+* **Variables** should be nouns that describe the data (`userEmail`, `userAge`)
+* **Functions** should be verbs that describe the action they perform (`calculateTotal`, `sendEmail`) 
+
+Poorly named variables and functions can lead to confusion and make it difficult for other developers to comprehend the code's purpose. This slows down the development and debugging process, as team members may have to spend extra time deciphering the intent behind a variable or function. Maintenance team makes it harder to update or extend the code in the future.
+
+Refactoring names transforms the code from being cryptic to being self-explanatory. It enhances readability, making it easier for developers to understand the logic and purpose of each component. For example, changing a function from `proc()` to `processMonthlyInvoices()` immediately tells the reviewer exactly what the business logic is, allowing them to focus on the correctness of the code rather than just trying to decipher what it is. 
