@@ -17,7 +17,8 @@ function t(items) {
     x += items[i].p * 1.12; 
   }
   return x;
-}```
+}
+```
 
 **Cleaner Version:**
 
@@ -29,3 +30,4 @@ function calculateTotalWithTax(cartItems) {
   
   return pricesWithTax.reduce((total, price) => total + price, 0);
 }
+```
