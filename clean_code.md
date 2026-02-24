@@ -277,3 +277,9 @@ function calculateProgress(completed, total) {
   return Math.min(percentage, 100); // Edge case: completion can't exceed 100%
 }
 ```
+
+## Issue 55: Reflection
+
+Unit tests act as a "safety net." In a mission-driven environment like Focus Bear where we aim to "squash bugs and enhance overall UX," tests allow us to refactor messy code without fear. If you find a function is hard to test, it’s usually a signal that the function is doing too many things and needs to be broken down into smaller, cleaner pieces **(the Single Responsibility Principle)**.
+
+During testing, it often becomes clear that the "happy path" (standard logic) is only a small part of the story. For example, without a test for `total = 0`, the code might have returned a `ZeroDivisionError`, crashing the app. Testing forced the inclusion of Guard Clauses, which made the function more robust and the error-handling logic more explicit.
