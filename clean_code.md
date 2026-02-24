@@ -31,3 +31,5 @@ function calculateTotalWithTax(cartItems) {
   return pricesWithTax.reduce((total, price) => total + price, 0);
 }
 ```
+
+The messy code is difficult to understand because of the vague function name `t`, the non-descriptive variable `x`, and the unexplained constant `1.12`. In contrast, the cleaner version uses meaningful names like `calculateTotalWithTax` and `SALES_TAX_RATE`, making it clear what the function does and why the constant is used. The use of array methods like `map` and `reduce` also enhances readability by abstracting away the loop logic, allowing the reader to focus on the intent of the code rather than its mechanics.
