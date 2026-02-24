@@ -8,7 +8,8 @@ In my coding and documentation tasks, I can implement "Alt-text" for all diagram
 
 **First-Person Account**
 
-*Source*:[How to ADHD: Why is it so Hard to Do Something That Seems Easy?](https://www.youtube.com/watch?v=Uo08uS904Rg)
+*Source*: [How to ADHD: Why is it so Hard to Do Something That Seems Easy?](https://www.youtube.com/watch?v=Uo08uS904Rg)
+
 *What I Learned*: I learned about the "Wall of Awful," which is the emotional barrier (shame, failure, and anxiety) that builds up around simple tasks for neurodivergent individuals. It taught me that a productivity tool shouldn't just provide a "To-Do" list; it needs to help the user manage the emotions associated with starting a task. This is why Focus Bear’s guided routines are so effective—they lower the emotional height of that wall.
 
 **Hypothetical Supportive Response**
