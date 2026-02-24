@@ -8,5 +8,7 @@ To ensure data privacy when using AI tools, I will strictly adhere in pasting pr
 
 **AI Tool Interaction**
 
+*AI Tool used:* Claude AI
+
 <img width="682" height="1036" alt="image" src="https://github.com/user-attachments/assets/a5ff3fbd-4f92-4f92-97aa-c5028c4e16f2" />
 
