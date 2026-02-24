@@ -61,7 +61,7 @@ Breaking down functions or simply what we call modularization is important becau
 
 Refactoring improved the structure by creating a **clear hierarchy**. The main function now serves as an orchestrator that calls smaller, more focused functions. This separation of concerns makes it easier to understand the flow of the code and allows for easier maintenance. If the validation logic needs to change in the future, I only have to edit one small, isolated function rather than hunting through a 50-line block of code.
 
-## Refactoring Exercise 
+### Refactoring Exercise 
 
 **Complex Version**
 
