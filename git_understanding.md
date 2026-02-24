@@ -13,3 +13,11 @@ Staging is the middle ground where you "prepare" specific files for a snapshot, 
 Git separates these steps to give developers control and flexibility over what goes into the project history. Instead of saving everything you've changed at once, the staging area allows you to curate your changes so that each commit represents a single, logical fix or feature rather than a messy pile of unrelated edits.
 
 You would want to stage changes without committing when you have modified several files but only want to group a few of them into a specific commit, such as separating a "bug fix" from a "documentation update." It is also useful when you are in the middle of a task and want to "mark" a file as ready while you continue working on other files that aren't quite finished yet.
+
+**Reflection *Issue #41***
+
+Pushing directly to *main* is risky because it bypasses the *safety net*. The *main* branch should always represent a stable version of the codebase, and pushing directly to it can introduce untested changes that may break the build or cause bugs for other developers. It also disrupts the collaborative workflow, as other team members won't have the chance to review and approve changes before they become part of the *main* codebase.
+
+Branches acts as a *sandbox* for development. By creating a separate branch for my work, I can submit a **Pull Request (PR)** for review and approval before merging into *main*. This ensures that changes are vetted by other developers, maintaining code quality and preventing disruptions to the main branch.
+
+When two people edit the same part of the same file on different branches, Git cannot automatically determine which change to keep during a merge, resulting in a **Merge Conflict**. This requires manual intervention to review the conflicting changes and decide how to resolve them, ensuring that the final code is correct and functional.
