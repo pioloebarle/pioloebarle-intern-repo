@@ -33,3 +33,14 @@ function calculateTotalWithTax(cartItems) {
 ```
 
 The messy code is difficult to understand because of the vague function name `t`, the non-descriptive variable `x`, and the unexplained constant `1.12`. In contrast, the cleaner version uses meaningful names like `calculateTotalWithTax` and `SALES_TAX_RATE`, making it clear what the function does and why the constant is used. The use of array methods like `map` and `reduce` also enhances readability by abstracting away the loop logic, allowing the reader to focus on the intent of the code rather than its mechanics.
+
+## Issue 48: Reflection
+
+Code formatting is essential for developers because it enhances readability and maintainability. Proper indentation, spacing, and consistent use of brackets make it easier for developers to understand the structure of the code at a glance. With this, collaborative projects become more efficient as team members can quickly navigate and comprehend each other's code without confusion.
+
+When I ran **ESLint** on my codebase, it detected several common issues:
+* **Unused Variables:** Variables that were declared but never used in the logic.
+* **Inconsistent quote:** A mix of single and double quotes
+* **Missing Semicolons:** Several lines were missing termination, which can lead to rare but frustrating bugs
+
+Yes, significantly. After using and running **Prettier**, it automatically formatted my code to be consistent with the project's style guidelines. This not only made my code look cleaner but also improved readability. It saved me time that I would have spent manually fixing formatting issues, allowing me to focus more on the logic and functionality of my code rather than worrying about style inconsistencies.
