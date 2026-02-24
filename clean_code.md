@@ -190,3 +190,42 @@ function getMemberAccess(user) {
   return user.isPremium ? "full" : "basic";
 }
 ```
+
+## Issue 53: Reflection
+
+You should add comments to explain **business logic**, **complex algorithms**, or **"non-obvious" decisions**. For example, if there is a specific reason why a certain discount is applied only to orders above $100, a comment can clarify that this is based on a business rule rather than an arbitrary choice. This helps other developers understand the rationale behind the code and prevents confusion when they encounter it later.
+
+You should avoid comments that explain **what** the code is doing if it's already clear from the code itself. For instance, a comment like `// check if user is older than 18` is unnecessary and instead change the variable name to `isAdult` or similar. Instead, focus on writing self-explanatory code through good naming conventions and clear logic, which reduces the need for such comments.
+
+### Refactoring Exercise
+
+**Poorly Commented Version**
+
+```Javascript
+// Function to handle data
+function d(u) {
+  // Check if u is active
+  if (u.a === 1) { 
+    // Set status to 1
+    u.s = 1; 
+    return u;
+  }
+}
+```
+
+**Better Commented Version**
+
+```Javascript
+/**
+ * Activates a user account based on verification status.
+ */
+function activateUserAccount(user) {
+  const IS_VERIFIED = 1;
+
+  if (user.verificationStatus === IS_VERIFIED) {
+    // We set status to 'active' here to trigger the welcome email sequence automatically
+    user.accountStatus = 'active'; 
+    return user;
+  }
+}
+```
