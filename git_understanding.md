@@ -69,3 +69,14 @@ A good commit message should be concise yet descriptive, and follow the **Conven
 Clear messages act as a communication tool for the team. When a colleague (or a senior reviewer) looks at the project history, they can quickly understand the purpose of each change without having to read the actual code. This makes Code Reviews faster and helps the team understand the "intent" behind a specific logic change, especially when working on complex mobile features.
 
 Poor commit messages can lead to confusion and make it difficult for others to trace the project history. If there is a bug introduced, it becomes harder to identify which commit caused it, especially if the message is vague like "fix stuff" or "update code." This can slow down debugging and make collaboration more frustrating, as team members may have to spend extra time deciphering the purpose of each commit.
+
+**Reflection *Issue #46***
+
+Pull Requests (PRs) are a critical part of modern software engineering because they move the "trust" from a single person to the entire team. In a project like **React**, PRs ensure that every change is scrutinized for performance, security, and accessibility before it becomes part of the main codebase. They provide a historical record of why a decision was made, which is invaluable for future developers who may need to understand the rationale behind a specific implementation.
+
+A well-structured PR should include a clear description of the change, the motivation behind it, and any relevant screenshots or test results. It should also be small and focused on a single issue or feature to make it easier for reviewers to understand and provide feedback.
+
+In reviewing the React repository, I learned that high-scale teams rely heavily on **Automation and Strict Labeling**. I observed three key things:
+* Automation First: Every PR triggers a suite of automated "Checks" (like CircleCI or GitHub Actions). If these fail, the PR is often ignored until the author fixes the linting or test errors.
+* Explicit Communication: Maintainers like Sophie Alpert or Dan Abramov often ask for "reproducible examples." This taught me that as a junior developer, I should always provide enough info for my reviewer to recreate my scenario.
+* Labeling as Triage: React uses specific labels (e.g., `Type: Bug`, `Component: Developer Tools`, `CLA Signed`) to manage thousands of contributors. This organization is what allows a small core team to manage a massive community.
