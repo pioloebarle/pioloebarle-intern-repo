@@ -61,3 +61,11 @@ I was surprised by how surgical **Cherry-picking** is. I always thought you had 
 I would use `git bisect` when I discover a bug that wasn't there a week ago, but I have no idea which of the 50 commits made during that week caused it. For example, if the **Focus Bear** mobile app suddenly starts crashing on the login screen, and I know it worked perfectly three days ago, `git bisect` will help me find the exact line change that caused the crash without me having to manually read through hundreds of lines of code.
 
 Manually reviewing commits is a **linear search**, this takes a long time when you have alot of commits. `git bisect` uses a **binary search** method, which is much faster because it cuts the number of commits to check in half with each step. This makes it an essential tool for quickly diagnosing and fixing bugs in a large codebase.
+
+**Reflection *Issue #45***
+
+A good commit message should be concise yet descriptive, and follow the **Conventional Commits** format. A high-quality message is usually split into a short summary (50 characters or less) that describes the change, followed by a more detailed body if necessary. It should also include the type of change (e.g., `feat`, `fix`, `docs`, `style`, `refactor`) and reference any related issues or pull requests.
+
+Clear messages act as a communication tool for the team. When a colleague (or a senior reviewer) looks at the project history, they can quickly understand the purpose of each change without having to read the actual code. This makes Code Reviews faster and helps the team understand the "intent" behind a specific logic change, especially when working on complex mobile features.
+
+Poor commit messages can lead to confusion and make it difficult for others to trace the project history. If there is a bug introduced, it becomes harder to identify which commit caused it, especially if the message is vague like "fix stuff" or "update code." This can slow down debugging and make collaboration more frustrating, as team members may have to spend extra time deciphering the purpose of each commit.
