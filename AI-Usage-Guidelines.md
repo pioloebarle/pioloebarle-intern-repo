@@ -7,5 +7,6 @@ To prevent over-reliance on AI, what I do is to rely first my skills such as cod
 To ensure data privacy when using AI tools, I will strictly adhere in pasting proprietary codes such as API keys and any other confidential data that can harm the company. When seeking help for a specific bugs, I'll input dummy variables to hide sensitive details. This practices maintain the professional integrity in a digital-first workspace.  
 
 **AI Tool Interaction**
+
 <img width="682" height="1036" alt="image" src="https://github.com/user-attachments/assets/a5ff3fbd-4f92-4f92-97aa-c5028c4e16f2" />
 
