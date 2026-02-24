@@ -24,28 +24,28 @@ When two people edit the same part of the same file on different branches, Git c
 
 **Reflection *Issue #43***
 
-***git checkout main -- <file>***
+`git checkout main -- <file>`
 
 **What it does:** IT pulls the version of a specific file from the *main* branch and overwrites the current version in your current branch.
 
 **Real Project Use Case:** Use this if you’ve made a mess of a specific file (like a config file) and you just want to "reset" that one file back to the stable version from *main* without losing all your other work in the current branch.
 
 
-***git cherry-pick <commit>***
+`git cherry-pick <commit>`
 
 **What it does:** It allows you to grab a single, specific commit from one branch and apply it to another without merging the entire branch.
 
 **Real Project Use Case:** If a teammate fixed a critical bug on a different feature branch, you can "cherry-pick" just that bug fix into your branch immediately, rather than waiting for their whole feature to be finished and merged.
 
 
-***git log***
+`git log`
 
 **What it does:** It displays the history of all commits in the repository, showing the author, date, and commit message.
 
 **Real Project Use Case:** I use this to trace the evolution of a feature or to find a specific "commit hash" (the unique ID) if I need to revert to a previous version of the project.
 
 
-***git blame <file>***
+`git blame <file>`
 
 **What it does:** It shows a line-by-line breakdown of a file, identifying exactly who modified each line and in which commit.
 
