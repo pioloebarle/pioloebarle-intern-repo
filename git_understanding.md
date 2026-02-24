@@ -21,3 +21,31 @@ Pushing directly to *main* is risky because it bypasses the *safety net*. The *m
 Branches acts as a *sandbox* for development. By creating a separate branch for my work, I can submit a **Pull Request (PR)** for review and approval before merging into *main*. This ensures that changes are vetted by other developers, maintaining code quality and preventing disruptions to the main branch.
 
 When two people edit the same part of the same file on different branches, Git cannot automatically determine which change to keep during a merge, resulting in a **Merge Conflict**. This requires manual intervention to review the conflicting changes and decide how to resolve them, ensuring that the final code is correct and functional.
+
+**Reflection *Issue #43***
+
+***git checkout main -- <file>***
+
+**What it does:** IT pulls the version of a specific file from the *main* branch and overwrites the current version in your current branch.
+
+**Real Project Use Case:** Use this if you’ve made a mess of a specific file (like a config file) and you just want to "reset" that one file back to the stable version from *main* without losing all your other work in the current branch.
+
+***git cherry-pick <commit>***
+
+**What it does:** It allows you to grab a single, specific commit from one branch and apply it to another without merging the entire branch.
+
+**Real Project Use Case:** If a teammate fixed a critical bug on a different feature branch, you can "cherry-pick" just that bug fix into your branch immediately, rather than waiting for their whole feature to be finished and merged.
+
+***git log***
+
+**What it does:** It displays the history of all commits in the repository, showing the author, date, and commit message.
+
+**Real Project Use Case:** I use this to trace the evolution of a feature or to find a specific "commit hash" (the unique ID) if I need to revert to a previous version of the project.
+
+***git blame <file>***
+
+**What it does:** It shows a line-by-line breakdown of a file, identifying exactly who modified each line and in which commit.
+
+**Real Project Use Case:** This is incredibly useful for "context hunting." If I see a confusing line of code in the mobile app, I use `git blame` to see who wrote it and when. This allows me to ask that specific developer for the reasoning behind that logic.
+
+I was surprised by how surgical **Cherry-picking** is. I always thought you had to merge everything or nothing, but the ability to pull just one specific fix is a huge time-saver. I also found git blame to be less about "blaming" people and more about understanding the history of the code—it's like having a time machine for every single line of code in the repository.
