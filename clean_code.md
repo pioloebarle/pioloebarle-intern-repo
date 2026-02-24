@@ -147,3 +147,46 @@ function calculateFinalPrice(price, discountRate) {
 const electronicsPrice = calculateFinalPrice(100, 0.10);
 const clothingPrice = calculateFinalPrice(100, 0.05);
 ```
+
+## Issue 52: Reflection
+
+The original code was complex due to **Over-Engineering** and **Deep Nesting**. The function tried to handle too many responsibilities at once, such as validating input, processing data, and formatting output, all within a single block of code. This made it difficult to understand the flow and purpose of each section. Additionally, the deep nesting of conditionals and loops added to the complexity, making it harder to follow the logic.
+
+Refactoring improved the code by making it **Declarative** rather than **Imperative**. Instead of describing *how* to perform a task step-by-step, the refactored version describes *what* the task is and lets the code express that intent more clearly. This makes the code easier to read, understand, and maintain. The resulting code is not just shorter, but significantly more robust because there are fewer logical branches where bugs can hide.
+
+### Refactoring Exercise
+
+**Complex Version**
+
+```Javascript
+function getMemberAccess(user) {
+  let accessLevel = "none";
+
+  if (user !== null) {
+    if (user.isActive) {
+      if (user.isPremium) {
+        accessLevel = "full";
+      } else {
+        accessLevel = "basic";
+      }
+    } else {
+      accessLevel = "blocked";
+    }
+  } else {
+    accessLevel = "guest";
+  }
+
+  return accessLevel;
+}
+```
+
+**Refactored Version**
+
+```Javascript
+function getMemberAccess(user) {
+  if (!user) return "guest";
+  if (!user.isActive) return "blocked";
+  
+  return user.isPremium ? "full" : "basic";
+}
+```
