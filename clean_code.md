@@ -107,3 +107,43 @@ function processOrder(item, price, quantity, discountCode) {
   return finalTotal;
 }
 ```
+
+## Issue 51: Reflection
+
+Duplicated code is problematic because it increases the chances of bugs and makes maintenance more difficult. This introduces large size of codebase that is unnecessary on a project. It makes the readability of the code harder because of cluttered codebase.
+
+Refactoring to eliminate duplication creates a **"Single Source of Truth."** By moving repeated logic into a shared function or a reusable component, any future changes only need to happen in one place. This significantly reduces the risk of bugs, makes the code easier to test, and ensures that the entire application stays consistent. It turns the code from a collection of "copied-and-pasted fragments" into a structured, modular system.
+
+### Refactoring Exercise
+
+**Duplicated Version**
+
+```Javascript
+function getElectronicsPrice(price) {
+  const tax = price * 0.12;
+  const discount = price * 0.10; // 10% discount
+  return price + tax - discount;
+}
+
+function getClothingPrice(price) {
+  const tax = price * 0.12;
+  const discount = price * 0.05; // 5% discount
+  return price + tax - discount;
+}
+```
+
+**Refactored Version**
+
+```Javascript
+function calculateFinalPrice(price, discountRate) {
+  const SALES_TAX = 0.12;
+  const taxAmount = price * SALES_TAX;
+  const discountAmount = price * discountRate;
+  
+  return price + taxAmount - discountAmount;
+}
+
+
+const electronicsPrice = calculateFinalPrice(100, 0.10);
+const clothingPrice = calculateFinalPrice(100, 0.05);
+```
