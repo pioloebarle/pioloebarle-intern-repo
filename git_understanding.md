@@ -53,3 +53,11 @@ When two people edit the same part of the same file on different branches, Git c
 
 
 I was surprised by how surgical **Cherry-picking** is. I always thought you had to merge everything or nothing, but the ability to pull just one specific fix is a huge time-saver. I also found git blame to be less about "blaming" people and more about understanding the history of the code—it's like having a time machine for every single line of code in the repository.
+
+**Reflection *Issue #44***
+
+`git bisect` is a command that performs a binary search through your commit history to find the  "bad" commit that introduced a bug. You tell Git one "good" point in the past where the code worked, and one "bad" point where the bug is present. Git then automatically checkouts a commit in the middle and asks you if it's good or bad. It continues halving the range until the specific commit that caused the issue is isolated.
+
+I would use `git bisect` when I discover a bug that wasn't there a week ago, but I have no idea which of the 50 commits made during that week caused it. For example, if the **Focus Bear** mobile app suddenly starts crashing on the login screen, and I know it worked perfectly three days ago, `git bisect` will help me find the exact line change that caused the crash without me having to manually read through hundreds of lines of code.
+
+Manually reviewing commits is a **linear search**, this takes a long time when you have alot of commits. `git bisect` uses a **binary search** method, which is much faster because it cuts the number of commits to check in half with each step. This makes it an essential tool for quickly diagnosing and fixing bugs in a large codebase.
