@@ -54,3 +54,56 @@ A good naming convention is crucial for code readability and maintainability. It
 Poorly named variables and functions can lead to confusion and make it difficult for other developers to comprehend the code's purpose. This slows down the development and debugging process, as team members may have to spend extra time deciphering the intent behind a variable or function. Maintenance team makes it harder to update or extend the code in the future.
 
 Refactoring names transforms the code from being cryptic to being self-explanatory. It enhances readability, making it easier for developers to understand the logic and purpose of each component. For example, changing a function from `proc()` to `processMonthlyInvoices()` immediately tells the reviewer exactly what the business logic is, allowing them to focus on the correctness of the code rather than just trying to decipher what it is. 
+
+## Issue 50: Reflection
+
+Breaking down functions or simply what we call modularization is important because it promotes code reusability and makes it easier to test and debug. When a function is too long or does too many things, it becomes difficult to understand and maintain. By breaking it down into smaller, focused functions, each function can be tested independently, which leads to more reliable code.
+
+Refactoring improved the structure by creating a **clear hierarchy**. The main function now serves as an orchestrator that calls smaller, more focused functions. This separation of concerns makes it easier to understand the flow of the code and allows for easier maintenance. If the validation logic needs to change in the future, I only have to edit one small, isolated function rather than hunting through a 50-line block of code.
+
+## Refactoring Exercise 
+
+**Complex Version**
+
+```Javascript
+function processOrder(item, price, quantity, discountCode) {
+  // 1. Calculate base
+  let total = price * quantity;
+  
+  // 2. Apply complex discount logic
+  if (discountCode === 'SAVE10' && total > 100) {
+    total = total * 0.9;
+  } else if (discountCode === 'WELCOME') {
+    total = total - 5;
+  }
+  
+  // 3. Format and Log
+  const formattedPrice = `$${total.toFixed(2)}`;
+  console.log(`Order for ${item}: ${formattedPrice}`);
+  
+  return total;
+}
+```
+
+**Refactored Version**
+
+```Javascript
+function getDiscountedTotal(amount, code) {
+  if (code === 'SAVE10' && amount > 100) return amount * 0.9;
+  if (code === 'WELCOME') return amount - 5;
+  return amount;
+}
+
+function formatCurrency(amount) {
+  return `$${amount.toFixed(2)}`;
+}
+
+function processOrder(item, price, quantity, discountCode) {
+  const baseTotal = price * quantity;
+  const finalTotal = getDiscountedTotal(baseTotal, discountCode);
+  
+  console.log(`Order for ${item}: ${formatCurrency(finalTotal)}`);
+  
+  return finalTotal;
+}
+```
