@@ -229,3 +229,51 @@ function activateUserAccount(user) {
   }
 }
 ```
+
+## Issue 54: Reflection
+
+The original code followed the **Happy Path** only. It assumed that all inputs of the user are always valid numbers and that the `total` would never be zero or negative. This can lead to runtime errors or incorrect behavior if the user enters invalid data, such as a non-numeric value or a negative number. By refactoring to include **Error Handling**, we can catch these potential issues and provide feedback to the user, preventing crashes and improving the overall user experience. This makes the code more robust and resilient to unexpected inputs, ensuring that it behaves correctly under a wider range of conditions.
+
+Handling errors improve reliability by:
+* **Predictability:** The function now behaves consistently even when given "garbage" data.
+* **Easier Debugging:** By throwing specific errors or returning logical defaults, it's much easier to identify where the problem lies when something goes wrong.
+* **User Experience:** Instead of the app crashing, the user sees a valid statement that guides them to correct their input, which is a much better experience.
+
+**Guard Clauses**
+Instead of nesting your main logic deep inside `if-else` statements, you can use guard clauses to handle edge cases upfront. This keeps the main logic at the top level and makes it easier to read.
+
+### Refactoring Exercise
+
+**Original Script**
+
+```Javascript
+function calculateProgress(completed, total) {
+  // Issue: If total is 0, this returns Infinity. 
+  // If inputs are strings, it might return NaN.
+  return (completed / total) * 100;
+}
+```
+**Refactored Script**
+
+```Javascript
+function calculateProgress(completed, total) {
+  // 1. Guard Clause: Check for non-numeric types
+  if (typeof completed !== 'number' || typeof total !== 'number') {
+    throw new Error("Inputs must be numbers");
+  }
+
+  // 2. Guard Clause: Handle the "Division by Zero" edge case
+  if (total === 0) {
+    return 0; 
+  }
+
+  // 3. Guard Clause: Handle negative values
+  if (completed < 0 || total < 0) {
+    return 0;
+  }
+
+  // Happy Path
+  const percentage = (completed / total) * 100;
+  return Math.min(percentage, 100); // Edge case: completion can't exceed 100%
+}
+```
