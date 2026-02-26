@@ -1,11 +1,9 @@
 import './App.css'
-
+import HelloWorld from './HelloWorld'
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <HelloWorld name = "Piolo Pascual E. Besinga" ></HelloWorld>
     </>
   )
 }
