@@ -60,6 +60,38 @@ I would use `git bisect` when I discover a bug that wasn't there a week ago, but
 
 Manually reviewing commits is a **linear search**, this takes a long time when you have alot of commits. `git bisect` uses a **binary search** method, which is much faster because it cuts the number of commits to check in half with each step. This makes it an essential tool for quickly diagnosing and fixing bugs in a large codebase.
 
+### Git Bisect Hands-On Scenario
+
+**Scenario Setup:**
+I created a simple JavaScript math library (`math.js`) with multiple commits to practice git bisect in the `milestones/3-Learn-Git/` folder.
+
+**Commits Made:**
+1. **Commit 1:** "Add add function" - Added `add()` function, working correctly
+2. **Commit 2:** "Add subtract function" - Added `subtract()` function, working correctly  
+3. **Commit 3:** "Add multiply function" - Added `multiply()` function, working correctly
+4. **Commit 4:** "Update math functions" - **BUG INTRODUCED**: Changed `subtract(a, b)` from `return a - b` to `return a + b`
+5. **Commit 5:** "Add divide function" - Added `divide()` function, bug still present
+
+**Bug Discovered:**  
+The `subtract(10, 5)` function was returning `15` instead of the expected `5`.
+
+**Using Git Bisect to Find the Bug:**
+I ran the following commands to locate the exact commit that introduced the bug:
+
+```bash
+git bisect start          # Start the bisect process
+git bisect bad            # Mark current state as bad (bug exists)
+git bisect good HEAD~4    # Mark 4 commits ago as good (worked fine)
+# Git automatically checks out the middle commit
+# At each step, I tested the subtract function to see if it worked
+git bisect good/bad       # Marked each commit based on test results
+```
+
+**Result:**
+Git bisect identified **Commit 3** ("Add multiply function") with hash `315648392104643da800a4ff0a3b64a23ee3d355` as the first bad commit. This process took only 1-2 test steps instead of manually reviewing all 5 commits, demonstrating the efficiency of binary search over linear search.
+
+![Git Bisect Terminal Session](git%20bisect.png)
+
 ## Reflection *Issue #45*: Writing Meaningful Commit Messages
 
 A good commit message should be concise yet descriptive, and follow the **Conventional Commits** format. A high-quality message is usually split into a short summary (50 characters or less) that describes the change, followed by a more detailed body if necessary. It should also include the type of change (e.g., `feat`, `fix`, `docs`, `style`, `refactor`) and reference any related issues or pull requests.
@@ -79,3 +111,4 @@ In reviewing the React repository, I learned that high-scale teams rely heavily 
 * Automation First: Every PR triggers a suite of automated "Checks" (like CircleCI or GitHub Actions). If these fail, the PR is often ignored until the author fixes the linting or test errors.
 * Explicit Communication: Maintainers like Sophie Alpert or Dan Abramov often ask for "reproducible examples." This taught me that as a junior developer, I should always provide enough info for my reviewer to recreate my scenario.
 * Labeling as Triage: React uses specific labels (e.g., `Type: Bug`, `Component: Developer Tools`, `CLA Signed`) to manage thousands of contributors. This organization is what allows a small core team to manage a massive community.
+        
