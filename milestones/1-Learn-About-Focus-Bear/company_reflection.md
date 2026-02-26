@@ -1,6 +1,6 @@
-**Reflection**
+# Reflection on Focus Bear’s Mission
 
-Focus Bear’s mission is vital because it addresses the *invisible* barriers to productivity faced by the neurodivergent community. After exploring the site, I was particularly struck by their vision of being a *Digital Sidekick* that doesn't just block apps, but actively guides users through Executive Functioning challenges. They aren't just a *blocker*, they are a support system that values the human behind the screen, a sentiment captured in their commitment to *habit formation without the shame.* 
+Focus Bear’s mission is vital because it addresses the *invisible* barriers to productivity faced by the neurodivergent community. After exploring the site, I was particularly struck by their vision of being a *Digital Sidekick* that doesn't just block apps, but actively guides users through Executive Functioning challenges. They aren't just a *blocker*, they are a support system that values the human behind the screen, a sentiment captured in their commitment to *habit formation without the shame.*
 
 One specific feature that stood out to me is the **Guided Morning Routine**. Often, productivity tools assume you are already at your desk ready to work, but Focus Bear acknowledges that starting the day is the hardest part for many. By automating the sequence of habits before the workday even begins, the app protects the user's limited *focus fuel*.
 

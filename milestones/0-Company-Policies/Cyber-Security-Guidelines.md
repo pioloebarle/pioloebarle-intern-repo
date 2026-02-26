@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection
 
 I currently maintain a habit of using unique passwords for my personal account and school accounts to prevent vulnerabilities. I also enabled two-factor authentication to ensure there are no unauthorized access on all my accounts. I also disciplined myself to lock my workstation, having password on my laptop every single time I step away from my workspace, even at home. These practices I do ensures that my transition into a professional remote work environment is as secure as possible.
 

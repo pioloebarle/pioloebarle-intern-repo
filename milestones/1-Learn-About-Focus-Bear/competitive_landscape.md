@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection on Focus Bear’s Competitive Landscape
 
 Focus Bear distinguishes itself by having features not only focused on passive restriction such as blocking and restricting specific application to focus on your work but also guiding users to build healthy habits. Focus Bear takes a holistic approach.
 

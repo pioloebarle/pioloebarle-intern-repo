@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection
 
 During my time as an intern at Focus Bear, I want to gain a deep understanding of how high-level software architectures are implemented and managed within a professional Agile environment.
 

@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection on Professionalism
 
 Working on my thesis project, our team thrived because we clearly defined roles and maintained open communication about the deadlines we must required to finish. It was effective because we valued each other's technical input and focused on the shared goal rather than individual credit.
 
@@ -11,5 +11,3 @@ Being proactive means identifying potential bugs in the code before they become 
 I would send a polite follow-up message via the team's primary communication channel after a reasonable amount of time, such as 24 hours. If there is still no response and it's a critical blocker for a deadline, I would escalate by tagging them in the relevant GitHub issue or reaching out to a direct lead.
 
 I will never engage in toxic behavior, such as blaming others for technical errors and also to practice not being overly independent on working on tasks, since these will results to problems and delaying my time. Additionally, I will not ignore feedback or submit code that hasn't been properly tested and reviewed.
-
-

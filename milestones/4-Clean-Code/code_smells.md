@@ -1,6 +1,8 @@
-### Refactor Exercise
+# Milestone 4: Clean Code
 
-**Smelly Code**
+## Refactor Exercise
+
+### Smelly Code
 
 ```python
 def prnt_notif(u_type, mins):
@@ -18,7 +20,7 @@ def prnt_notif(u_type, mins):
     # print("Debugging u_type")
 ```
 
-**Refactored Code**
+### Refactored Code
 
 ```python
 # Constants to eliminate Magic Numbers

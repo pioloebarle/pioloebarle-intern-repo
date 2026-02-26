@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection
 
 I have used Git previously for various academic projects, such as working on the Course Management System, Mama's Recipe and my senior thesis project. In these contexts, Git was essential for collaborating with my teammates, as it allowed us to work on the same codebase without overwriting each other's contribution
 
