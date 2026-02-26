@@ -7,6 +7,14 @@ I did not face any challenges while setting up the React Project with TailWind C
 **Youtube Video:**
 [How to Create a React App with Tailwind CSS v4 | Full Project & Setup Tutorial (2025)](https://www.youtube.com/watch?v=8ffYlFxxBpc)
 
+### Steps in Setting up React with TailWind CSS
+* `npm create vite@latest`
+  * Framework: React
+  * Variant: JavaScript
+* `npm run dev`
+* `npm install tailwindcss @tailwindcss/vite`
+  * for more details visit [TailWind CSS Documentation](https://tailwindcss.com/docs/installation/using-vite)
+
 ## Issue 60: Understanding Components & Props
 
 Components are very important in React because they allow us to break down our UI into smaller, reusable pieces. This makes our code more organized and easier to maintain. Components also help us to manage the state of our application and to create dynamic user interfaces.
