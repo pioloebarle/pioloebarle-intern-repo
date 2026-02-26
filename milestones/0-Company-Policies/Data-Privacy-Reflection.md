@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection
 
 I will strictly adhere to Focus Bear's policy of "fair, lawful, and transparent" data processing by only accessing information necessary for my specific engineering tasks. Since the company uses double encryption for sensitive habit data, I will ensure that any local development environments I use do not bypass these protections.
 

@@ -1,4 +1,4 @@
-**Reflection**
+# Reflection
 
 To be more inclusive, I will prioritize direct and clear communication by avoiding the use of jargon words and figurative language that could be misinterpreted. I will provide information in a detailed, structure formats for teammates who may struggle with large blocks of text. I will also respect each other's way of communication and working styles without interrupting them.
 
@@ -6,7 +6,7 @@ One major pitfall is an overwhelming UI with bright colors which can lead to ove
 
 In my coding and documentation tasks, I can implement "Alt-text" for all diagrams and ensure that any user-facing messages are written at a simple reading level. By testing my software with accessibility tools from the start, I can catch potential barriers to entry before they affect neurodivergent users.
 
-**First-Person Account**
+## First-Person Account
 
 *Source*: [How to ADHD: Why is it so Hard to Do Something That Seems Easy?](https://www.youtube.com/watch?v=Uo08uS904Rg)
 

@@ -1,13 +1,16 @@
+# Milestone 4: Clean Code
+
 ## Issue 47
 
-**Clean Code Principles**
-* **Simplicity:** Avoid over-complicating logic. Simple code is easier to read and maintain.
-* **Readability:** Code should be self-explanatory. Use meaningful variable and function names that convey intent. 
-* **Maintainability:** Write code that can be easily updated or extended in the future. Avoid hardcoding values and use constants or configuration files instead.
-* **Consistency:** Follow consistent naming conventions and code formatting throughout the project. If the project uses `moveUp()`, don't switch to `move_up()` in another part of the codebase. 
-* **Efficiency:** While clean code prioritizes readability, it should also be efficient. Avoid unnecessary computations or complex algorithms when a simpler solution exists. However, never sacrifice readability for micro-optimizations unless it's a critical performance bottleneck. 
+### Clean Code Principles
 
-**Messy Code:**
+* **Simplicity:** Avoid over-complicating logic. Simple code is easier to read and maintain.
+* **Readability:** Code should be self-explanatory. Use meaningful variable and function names that convey intent.
+* **Maintainability:** Write code that can be easily updated or extended in the future. Avoid hardcoding values and use constants or configuration files instead.
+* **Consistency:** Follow consistent naming conventions and code formatting throughout the project. If the project uses `moveUp()`, don't switch to `move_up()` in another part of the codebase.
+* **Efficiency:** While clean code prioritizes readability, it should also be efficient. Avoid unnecessary computations or complex algorithms when a simpler solution exists. However, never sacrifice readability for micro-optimizations unless it's a critical performance bottleneck.
+
+#### Messy Code
 
 ```Javascript
 function t(items) {
@@ -20,7 +23,7 @@ function t(items) {
 }
 ```
 
-**Cleaner Version:**
+#### Cleaner Version
 
 ```Javascript
 const SALES_TAX_RATE = 1.12;
@@ -39,6 +42,7 @@ The messy code is difficult to understand because of the vague function name `t`
 Code formatting is essential for developers because it enhances readability and maintainability. Proper indentation, spacing, and consistent use of brackets make it easier for developers to understand the structure of the code at a glance. With this, collaborative projects become more efficient as team members can quickly navigate and comprehend each other's code without confusion.
 
 When I ran **ESLint** on my codebase, it detected several common issues:
+
 * **Unused Variables:** Variables that were declared but never used in the logic.
 * **Inconsistent quote:** A mix of single and double quotes
 * **Missing Semicolons:** Several lines were missing termination, which can lead to rare but frustrating bugs
@@ -47,13 +51,14 @@ Yes, significantly. After using and running **Prettier**, it automatically forma
 
 ## Issue 49: Reflection
 
-A good naming convention is crucial for code readability and maintainability. It should tell the reader why it exists, what it does, and how it should be used. 
+A good naming convention is crucial for code readability and maintainability. It should tell the reader why it exists, what it does, and how it should be used.
+
 * **Variables** should be nouns that describe the data (`userEmail`, `userAge`)
-* **Functions** should be verbs that describe the action they perform (`calculateTotal`, `sendEmail`) 
+* **Functions** should be verbs that describe the action they perform (`calculateTotal`, `sendEmail`)
 
 Poorly named variables and functions can lead to confusion and make it difficult for other developers to comprehend the code's purpose. This slows down the development and debugging process, as team members may have to spend extra time deciphering the intent behind a variable or function. Maintenance team makes it harder to update or extend the code in the future.
 
-Refactoring names transforms the code from being cryptic to being self-explanatory. It enhances readability, making it easier for developers to understand the logic and purpose of each component. For example, changing a function from `proc()` to `processMonthlyInvoices()` immediately tells the reviewer exactly what the business logic is, allowing them to focus on the correctness of the code rather than just trying to decipher what it is. 
+Refactoring names transforms the code from being cryptic to being self-explanatory. It enhances readability, making it easier for developers to understand the logic and purpose of each component. For example, changing a function from `proc()` to `processMonthlyInvoices()` immediately tells the reviewer exactly what the business logic is, allowing them to focus on the correctness of the code rather than just trying to decipher what it is.
 
 ## Issue 50: Reflection
 
@@ -61,9 +66,9 @@ Breaking down functions or simply what we call modularization is important becau
 
 Refactoring improved the structure by creating a **clear hierarchy**. The main function now serves as an orchestrator that calls smaller, more focused functions. This separation of concerns makes it easier to understand the flow of the code and allows for easier maintenance. If the validation logic needs to change in the future, I only have to edit one small, isolated function rather than hunting through a 50-line block of code.
 
-### Refactoring Exercise 
+### Refactoring Exercise: Modularization
 
-**Complex Version**
+#### Complex Version: Long Function with Multiple Responsibilities
 
 ```Javascript
 function processOrder(item, price, quantity, discountCode) {
@@ -85,7 +90,7 @@ function processOrder(item, price, quantity, discountCode) {
 }
 ```
 
-**Refactored Version**
+#### Refactored Version: Modularization
 
 ```Javascript
 function getDiscountedTotal(amount, code) {
@@ -114,9 +119,9 @@ Duplicated code is problematic because it increases the chances of bugs and make
 
 Refactoring to eliminate duplication creates a **"Single Source of Truth."** By moving repeated logic into a shared function or a reusable component, any future changes only need to happen in one place. This significantly reduces the risk of bugs, makes the code easier to test, and ensures that the entire application stays consistent. It turns the code from a collection of "copied-and-pasted fragments" into a structured, modular system.
 
-### Refactoring Exercise
+### Refactoring Exercise: Duplication
 
-**Duplicated Version**
+#### Duplicated Version
 
 ```Javascript
 function getElectronicsPrice(price) {
@@ -132,7 +137,7 @@ function getClothingPrice(price) {
 }
 ```
 
-**Refactored Version**
+#### Refactored Version: Eliminate Duplication
 
 ```Javascript
 function calculateFinalPrice(price, discountRate) {
@@ -154,9 +159,9 @@ The original code was complex due to **Over-Engineering** and **Deep Nesting**. 
 
 Refactoring improved the code by making it **Declarative** rather than **Imperative**. Instead of describing *how* to perform a task step-by-step, the refactored version describes *what* the task is and lets the code express that intent more clearly. This makes the code easier to read, understand, and maintain. The resulting code is not just shorter, but significantly more robust because there are fewer logical branches where bugs can hide.
 
-### Refactoring Exercise
+### Refactoring Exercise: Complexity
 
-**Complex Version**
+#### Complex Version: Nested Code
 
 ```Javascript
 function getMemberAccess(user) {
@@ -180,7 +185,7 @@ function getMemberAccess(user) {
 }
 ```
 
-**Refactored Version**
+#### Refactored Version: Declarative and Simplified
 
 ```Javascript
 function getMemberAccess(user) {
@@ -197,9 +202,9 @@ You should add comments to explain **business logic**, **complex algorithms**, o
 
 You should avoid comments that explain **what** the code is doing if it's already clear from the code itself. For instance, a comment like `// check if user is older than 18` is unnecessary and instead change the variable name to `isAdult` or similar. Instead, focus on writing self-explanatory code through good naming conventions and clear logic, which reduces the need for such comments.
 
-### Refactoring Exercise
+### Refactoring Exercise: Comments
 
-**Poorly Commented Version**
+#### Poorly Commented Version
 
 ```Javascript
 // Function to handle data
@@ -213,7 +218,7 @@ function d(u) {
 }
 ```
 
-**Better Commented Version**
+#### Better Commented Version
 
 ```Javascript
 /**
@@ -235,6 +240,7 @@ function activateUserAccount(user) {
 The original code followed the **Happy Path** only. It assumed that all inputs of the user are always valid numbers and that the `total` would never be zero or negative. This can lead to runtime errors or incorrect behavior if the user enters invalid data, such as a non-numeric value or a negative number. By refactoring to include **Error Handling**, we can catch these potential issues and provide feedback to the user, preventing crashes and improving the overall user experience. This makes the code more robust and resilient to unexpected inputs, ensuring that it behaves correctly under a wider range of conditions.
 
 Handling errors improve reliability by:
+
 * **Predictability:** The function now behaves consistently even when given "garbage" data.
 * **Easier Debugging:** By throwing specific errors or returning logical defaults, it's much easier to identify where the problem lies when something goes wrong.
 * **User Experience:** Instead of the app crashing, the user sees a valid statement that guides them to correct their input, which is a much better experience.
@@ -242,9 +248,9 @@ Handling errors improve reliability by:
 **Guard Clauses**
 Instead of nesting your main logic deep inside `if-else` statements, you can use guard clauses to handle edge cases upfront. This keeps the main logic at the top level and makes it easier to read.
 
-### Refactoring Exercise
+### Refactoring Exercise: Guard Clauses and Error Handling
 
-**Original Script**
+#### Original Script
 
 ```Javascript
 function calculateProgress(completed, total) {
@@ -253,7 +259,8 @@ function calculateProgress(completed, total) {
   return (completed / total) * 100;
 }
 ```
-**Refactored Script**
+
+#### Refactored Script
 
 ```Javascript
 function calculateProgress(completed, total) {
