@@ -66,6 +66,7 @@ Manually reviewing commits is a **linear search**, this takes a long time when y
 I created a simple JavaScript math library (`math.js`) with multiple commits to practice git bisect in the `milestones/3-Learn-Git/` folder.
 
 **Commits Made:**
+
 1. **Commit 1:** "Add add function" - Added `add()` function, working correctly
 2. **Commit 2:** "Add subtract function" - Added `subtract()` function, working correctly  
 3. **Commit 3:** "Add multiply function" - Added `multiply()` function, working correctly
@@ -111,4 +112,3 @@ In reviewing the React repository, I learned that high-scale teams rely heavily 
 * Automation First: Every PR triggers a suite of automated "Checks" (like CircleCI or GitHub Actions). If these fail, the PR is often ignored until the author fixes the linting or test errors.
 * Explicit Communication: Maintainers like Sophie Alpert or Dan Abramov often ask for "reproducible examples." This taught me that as a junior developer, I should always provide enough info for my reviewer to recreate my scenario.
 * Labeling as Triage: React uses specific labels (e.g., `Type: Bug`, `Component: Developer Tools`, `CLA Signed`) to manage thousands of contributors. This organization is what allows a small core team to manage a massive community.
-        

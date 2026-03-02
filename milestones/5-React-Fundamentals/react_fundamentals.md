@@ -8,6 +8,7 @@ I did not face any challenges while setting up the React Project with TailWind C
 [How to Create a React App with Tailwind CSS v4 | Full Project & Setup Tutorial (2025)](https://www.youtube.com/watch?v=8ffYlFxxBpc)
 
 ### Steps in Setting up React with TailWind CSS
+
 * `npm create vite@latest`
   * Framework: React
   * Variant: JavaScript
@@ -122,6 +123,7 @@ function App() {
 
 export default App
 ```
+
 ## Issue 65: Navigation with React Router
 
 Client-side routing (CSR) allows a web application to update the URL and render different components without refreshing the entire page. The main advantages are:
@@ -146,8 +148,10 @@ In your terminal run this following command:
 
 [App.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/App.jsx)
 
-### Home.jsx Output:
+### Home.jsx Output
+
 ![Home](home.png)
 
-### Profile.jsx Output:
+### Profile.jsx Output
+
 ![Profile](profile.png)
