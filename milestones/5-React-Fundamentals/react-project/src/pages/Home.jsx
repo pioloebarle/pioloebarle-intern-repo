@@ -1,6 +1,7 @@
 import Profile from "../assets/profile.jpg"
 import EffectComponent from "../components/EffectComponent"
 import MemoComponent from "../components/MemoComponent"
+import CallbackComponent from "../components/CallbackComponent"
 
 function Home() {
   return (
@@ -22,6 +23,10 @@ function Home() {
 
       <div className="bg-gray-50 py-10">
         <MemoComponent />
+      </div>
+
+      <div className="bg-gray-100 py-10">
+        <CallbackComponent />
       </div>
     </div>
   )

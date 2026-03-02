@@ -33,3 +33,20 @@ If you remove it, the "expensive" calculation will run on **every single render*
 
 ### MemoComponent.jsx Output:
 ![MemoComponent](memoComponent.png)
+
+## Issue 68: Preventing Unnecessary Renders with `useCallback`
+
+`useCallback` solves the issue of **Referential Equality**. In JavaScript, every time a function is defined, it gets a new spot in memory. Even if the code inside is identical, `functionA === functionB` is `false`. In React, when a Parent re-renders, it re-creates all its functions. If those functions are passed as props to a Child, the Child thinks it received "new" data and re-renders unnecessarily. `useCallback` keeps the function's memory address the same between renders.
+
+`useMemo` calls a function and caches the result. On the other hand, `useCallback` caches the function itself without calling it.
+* `useMemo(() => fn())` returns the return value of `fn`.
+* `useCallback(() => fn)` returns the function `fn` itself.
+
+It is not useful if the component receiving the function is not wrapped in `React.memo`. If the Child re-renders every time the Parent does anyway, then `useCallback` is just adding extra work for React to track dependencies for no benefit. It’s also overkill for simple components where re-renders are extremely cheap and fast.
+
+### Code Snippet for useCallback
+
+[CallbackComponent.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/CallbackComponent.jsx)
+
+### CallbackComponent.jsx Output:
+![CallbackComponent](callbackComponent.png)
