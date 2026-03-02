@@ -122,3 +122,30 @@ function App() {
 
 export default App
 ```
+## Issue 65: Navigation with React Router
+
+Client-side routing (CSR) allows a web application to update the URL and render different components without refreshing the entire page. The main advantages are:
+
+1. **Faster Navigation**: Since the page doesn't need to reload, navigation feels much faster and smoother.
+
+2. **Reduced Server Load**: The server only sends the initial "shell" and subsequent data (via APIs), rather than re-rendering and sending full HTML pages for every click.
+
+3. **Better User Experience**: CSR allows for more dynamic and interactive user interfaces, as components can update in real-time without waiting for server responses.
+
+### Installation & Setup
+
+In your terminal run this following command:
+
+`npm install react-router-dom`
+
+### Code Snippet
+
+[Home.jsx]()
+[Profile.jsx]()
+[App.jsx]()
+
+### Home.jsx Output:
+![Home](home.png)
+
+### Profile.jsx Output:
+![Profile](profile.png)
