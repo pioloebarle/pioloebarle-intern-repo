@@ -11,3 +11,10 @@ Improper use of `useEffect` can lead to issues such as:
 2. **Memory Leaks**: If you set up subscriptions or timers in `useEffect` and forget to clean them up, it can lead to memory leaks.
 
 3. **Unnecessary Re-renders**: Including large objects or arrays in the dependency array without memoization (`useMemo`), causing the effect to fire on every render because the object's memory reference changed.
+
+### Code Snippet for useEffect
+
+[EffectComponent.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/EffectComponent.jsx)
+
+### EffectComponent.jsx Output:
+![EffectComponent](effectComponent.png)
