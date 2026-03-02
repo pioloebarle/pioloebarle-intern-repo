@@ -18,3 +18,18 @@ Improper use of `useEffect` can lead to issues such as:
 
 ### EffectComponent.jsx Output:
 ![EffectComponent](effectComponent.png)
+
+## Issue 67: Optimizing Performance with `useMemo`
+
+`useMemo` improves performance by **memoizing** (caching) the result of a calculation. In React, every time a state changes, the entire component re-renders. If you have a heavy loop or complex data transformation, it can cause performance issues. By using `useMemo`, you can ensure that the expensive calculation only runs when its dependencies change, rather than on every render.
+
+You should avoid it for **cheap calculations** (like simple string concatenation or basic math). Memoization itself has a "cost", React has to store the value in memory and run a comparison check on the dependencies every render. If the calculation is faster than the overhead of `useMemo`, using it actually makes your app slightly slower and uses more memory.
+
+If you remove it, the "expensive" calculation will run on **every single render**. In the example above, typing even one letter into the text input would trigger a re-render, which would force the for loop to run 1 billion times again. This would cause the UI to feel "laggy" or completely frozen while typing, even though the typing has nothing to do with the numbers being summed.
+
+### Code Snippet for useMemo
+
+[MemoComponent.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/MemoComponent.jsx)
+
+### MemoComponent.jsx Output:
+![MemoComponent](memoComponent.png)

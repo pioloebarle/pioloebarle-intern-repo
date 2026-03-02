@@ -26,6 +26,8 @@ function Navbar() {
                 
                 <Link to="/" aria-current="page" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:text-gray-600">Home</Link>
                 <Link to="/profile" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">Profile</Link>
+                <Link to="/effect" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">useEffect</Link>
+                <Link to="/memo" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">useMemo</Link>
               </div>
             </div>
           </div>
