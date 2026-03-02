@@ -141,7 +141,9 @@ In your terminal run this following command:
 ### Code Snippet
 
 [Home.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/pages/Home.jsx)
+
 [Profile.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/pages/Profile.jsx)
+
 [App.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/App.jsx)
 
 ### Home.jsx Output:
