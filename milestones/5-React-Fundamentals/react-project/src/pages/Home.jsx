@@ -1,7 +1,6 @@
 import Profile from "../assets/profile.jpg"
 import EffectComponent from "../components/EffectComponent"
 import MemoComponent from "../components/MemoComponent"
-import CallbackComponent from "../components/CallbackComponent"
 
 function Home() {
   return (
@@ -15,18 +14,6 @@ function Home() {
         <div className="flex justify-center min-h-screen items-center flex-col gap-2 bg-slate-50 w-1/3 p-10">
           <img src={Profile} alt="Profile Picture" className="rounded-full object-cover"/>
         </div>
-      </div>
-      
-      <div className="bg-gray-100 py-10">
-        <EffectComponent />
-      </div>
-
-      <div className="bg-gray-50 py-10">
-        <MemoComponent />
-      </div>
-
-      <div className="bg-gray-100 py-10">
-        <CallbackComponent />
       </div>
     </div>
   )

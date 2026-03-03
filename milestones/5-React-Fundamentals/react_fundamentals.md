@@ -24,7 +24,7 @@ Components are very important in React because they allow us to break down our U
 
 ![Components](components.png)
 
-### Code Snippet
+### Code Snippet for components with props
 
 ```Javascript
 function HelloWorld({ name }) {
@@ -38,7 +38,7 @@ function HelloWorld({ name }) {
 export default HelloWorld
 ```
 
-## Issue 61: Understanding Components & Props
+## Issue 61: Handling State & User Input
 
 If you modify state directly, React will not reflect the changes in the UI because it does not know that the state has changed. When you use the function like `setCount`, React is able to track the changes, re-render the component and update the changes in the UI accordingly. If you bypass this by changing the variable manually, the data changes in the background but the user still see the old value on the screen.
 
@@ -46,7 +46,7 @@ If you modify state directly, React will not reflect the changes in the UI becau
 
 ![useState](counter.png)
 
-### Code Snippet
+### Code Snippet for component with useState
 
 ```Javascript
 import { useState } from "react"
@@ -79,7 +79,7 @@ The common issues with Lists in React are:
 
 ![List](list.png)
 
-### Code Snippet
+### Code Snippet for list 
 
 ```Javascript
 import './App.css'
@@ -140,7 +140,7 @@ In your terminal run this following command:
 
 `npm install react-router-dom`
 
-### Code Snippet
+### Code Snippet for Navigation
 
 [Home.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/pages/Home.jsx)
 
@@ -148,10 +148,8 @@ In your terminal run this following command:
 
 [App.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/App.jsx)
 
-### Home.jsx Output
-
+### Home.jsx Output:
 ![Home](home.png)
 
-### Profile.jsx Output
-
+### Profile.jsx Output:
 ![Profile](profile.png)

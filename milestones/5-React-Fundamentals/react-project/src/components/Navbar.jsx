@@ -29,6 +29,7 @@ function Navbar() {
                 <Link to="/effect" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">useEffect</Link>
                 <Link to="/memo" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">useMemo</Link>
                 <Link to="/callback" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">useCallback</Link>
+                <Link to="/axios" className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-white/5 hover:text-gray-600">Axios</Link>
               </div>
             </div>
           </div>

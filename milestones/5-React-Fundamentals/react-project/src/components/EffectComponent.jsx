@@ -59,7 +59,7 @@ function EffectComponent() {
           <p><strong>Email:</strong> {data.email}</p>
           <p><strong>Phone:</strong> {data.phone}</p>
           <p>
-            <strong>GitHub:</strong> {' '}
+            <strong>GitHub:</strong>{' '}
             <a 
               href= {`https://github.com/${data.github}`} 
               target="_blank" 
