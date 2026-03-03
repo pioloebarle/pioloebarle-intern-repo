@@ -50,3 +50,4 @@ It is not useful if the component receiving the function is not wrapped in `Reac
 
 ### CallbackComponent.jsx Output:
 ![CallbackComponent](callbackComponent.png)
+
