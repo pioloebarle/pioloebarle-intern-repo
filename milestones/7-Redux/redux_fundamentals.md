@@ -18,6 +18,11 @@ In your terminal run this following command:
 
 ### Code Snippet in using Redux in React
 
+[Counter.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/Counter.jsx)
+
+[CounterSlice.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/redux/slices/CounterSlice.jsx)
+
+[Store.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/redux/Store.jsx)
 
 ### Counter.jsx Output:
 ![Counter](counterRedux.png)
