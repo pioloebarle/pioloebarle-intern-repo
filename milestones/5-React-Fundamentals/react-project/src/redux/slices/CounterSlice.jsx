@@ -26,4 +26,7 @@ export const counterSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { increment, decrement, incrementByAmount, reset } = counterSlice.actions
 
+// Selector function to get the counter value
+export const selectCounterValue = (state) => state.counter.value
+
 export default counterSlice.reducer

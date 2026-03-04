@@ -26,3 +26,25 @@ In your terminal run this following command:
 
 ### Counter.jsx Output:
 ![Counter](counterRedux.png)
+
+## Issue 64: Using Selectors in Redux Toolkit 
+
+These are the benefits of using selectors in Redux Toolkit:
+
+1. **Encapsulation**: Selectors encapsulate the logic for accessing specific parts of the state, making it easier to manage and maintain. This means that if the structure of the state changes, you only need to update the selector rather than every component that accesses that part of the state.
+2. **Derived Data**: Selectors can transform or compute data from the state. This keeps the component logic simple and focused on rendering, while the selector handles any necessary data manipulation.
+3. **Performance Optimization**: When using libraries like Reselect, selectors can be memoized, which means they will only recompute when their input state changes. This can improve performance by preventing unnecessary re-renders of components that rely on the selector's output.
+4. **Reusability**: Selectors can be reused across different components, promoting code reuse and consistency in how state is accessed throughout the application.
+
+### Code Snippet in using Selectors in Redux Toolkit
+
+[CounterSlice.jsx]()
+
+[CounterSlice.jsx]()
+
+[CounterSlice.jsx]()
+
+[CounterSlice.jsx]()
+
+### Counter.jsx Output:
+![Counter](counterReduxStatus.png)

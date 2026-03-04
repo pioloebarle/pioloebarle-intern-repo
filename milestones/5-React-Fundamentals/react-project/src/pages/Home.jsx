@@ -1,6 +1,4 @@
 import Profile from "../assets/profile.jpg"
-import EffectComponent from "../components/EffectComponent"
-import MemoComponent from "../components/MemoComponent"
 
 function Home() {
   return (

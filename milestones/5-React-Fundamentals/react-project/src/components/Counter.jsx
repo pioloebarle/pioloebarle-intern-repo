@@ -1,12 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement, reset } from '../redux/slices/CounterSlice'
+import { increment, decrement, reset, selectCounterValue } from '../redux/slices/CounterSlice'
+import CounterDisplay from './CounterDisplay'
 
 function Counter() {
-  const count = useSelector((state) => state.counter.value)
+  const count = useSelector(selectCounterValue)
   const dispatch = useDispatch()
 
   return (
-    <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-6 items-center p-8">
+      <h2 className="text-3xl font-bold text-gray-800">Redux Counter</h2>
       <div className="text-2xl font-bold">Count: {count}</div>
       <div className="flex gap-2">
         <button 
@@ -25,6 +27,7 @@ function Counter() {
           Reset
         </button>
       </div>
+      <CounterDisplay />
     </div>
   )
 }
