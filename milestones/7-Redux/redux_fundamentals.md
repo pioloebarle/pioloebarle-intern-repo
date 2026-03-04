@@ -38,13 +38,11 @@ These are the benefits of using selectors in Redux Toolkit:
 
 ### Code Snippet in using Selectors in Redux Toolkit
 
-[CounterSlice.jsx]()
+[Counter.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/Counter.jsx)
 
-[CounterSlice.jsx]()
+[CounterDisplay.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/CounterDisplay.jsx)
 
-[CounterSlice.jsx]()
-
-[CounterSlice.jsx]()
+[CounterSlice.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/redux/slices/CounterSlice.jsx)
 
 ### Counter.jsx Output:
 ![Counter](counterReduxStatus.png)
