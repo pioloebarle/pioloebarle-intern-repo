@@ -14,7 +14,7 @@ Source: [NativeWind Documentation Installation Guide](https://www.nativewind.dev
 
 ### Code Snippet on React Native Components
 
-[]()
+[index.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/index.tsx)
 
 ### Output of React Native Components:
 
