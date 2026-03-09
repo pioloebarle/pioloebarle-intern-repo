@@ -17,13 +17,13 @@ Handling API failures involves three layers:
 
 ## Code Snippet on React Native Components
 
-[api.ts]()
+[api.ts](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/services/api.ts)
 
-[userService.ts]()
+[userService.ts](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/services/userService.ts)
 
-[cacheService.ts]()
+[cacheService.ts](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/services/cacheService.ts)
 
-[apiTest.tsx]()
+[apiTest.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/apiTest.tsx)
 
 ### Output of Navigation:
 
