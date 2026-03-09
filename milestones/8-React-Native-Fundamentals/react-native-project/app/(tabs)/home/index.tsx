@@ -4,7 +4,6 @@
 // import { ThemedText } from '@/components/themed-text';
 // import { ThemedView } from '@/components/themed-view';
 // import { Link } from 'expo-router';
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { Button, createTheme, ThemeProvider } from "@rneui/themed";
 import { useState } from "react";
 import {
@@ -14,7 +13,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import "../../global.css";
+import "../../../global.css";
 
 const categories = ["Home", "Explore", "Profile", "Settings", "Help"];
 export default function HomeScreen() {
@@ -54,9 +53,8 @@ export default function HomeScreen() {
       backgroundColor: currentColors.background,
     },
     container: {
-      flex: 1,
-      marginTop: 30,
-      padding: 2,
+      marginTop: 1,
+      backgroundColor: currentColors.background,
     },
     titleContainer: {
       flexDirection: "row",
@@ -100,15 +98,11 @@ export default function HomeScreen() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ScrollView style={styles.scrollContainer}>
+      <ScrollView
+        style={styles.scrollContainer}
+        contentContainerStyle={{ paddingTop: 0 }}
+      >
         <View style={styles.container}>
-          <FontAwesome6
-            name="bars"
-            size={24}
-            color={currentColors.primary}
-            className="mb-3"
-            // onPress={}
-          />
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Hello There!</Text>
           </View>
