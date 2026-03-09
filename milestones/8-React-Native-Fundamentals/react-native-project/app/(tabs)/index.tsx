@@ -1,6 +1,12 @@
 // import { Image } from 'expo-image';
+// import { HelloWave } from '@/components/hello-wave';
+// import ParallaxScrollView from '@/components/parallax-scroll-view';
+// import { ThemedText } from '@/components/themed-text';
+// import { ThemedView } from '@/components/themed-view';
+// import { Link } from 'expo-router';
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
-import { LinearGradient } from "expo-linear-gradient";
+import { Button, createTheme, ThemeProvider } from "@rneui/themed";
+import { useState } from "react";
 import {
   ScrollView,
   StyleSheet,
@@ -10,22 +16,99 @@ import {
 } from "react-native";
 import "../../global.css";
 
-// import { HelloWave } from '@/components/hello-wave';
-// import ParallaxScrollView from '@/components/parallax-scroll-view';
-// import { ThemedText } from '@/components/themed-text';
-// import { ThemedView } from '@/components/themed-view';
-// import { Link } from 'expo-router';
 const categories = ["Home", "Explore", "Profile", "Settings", "Help"];
-
 export default function HomeScreen() {
+  const [mode, setMode] = useState<"light" | "dark">("light");
+  const theme = createTheme({
+    lightColors: {
+      primary: "#3A83F4",
+      secondary: "#09B5D3",
+      background: "#FFFFFF",
+      black: "#000000",
+      grey0: "#F5F5F5",
+    },
+    darkColors: {
+      primary: "#5A9FFF",
+      secondary: "#2AC9E8",
+      background: "#1A1A1A",
+      black: "#FFFFFF",
+      grey0: "#333333",
+    },
+    mode: mode,
+  });
+
+  const toggleTheme = () => {
+    return setMode(mode === "light" ? "dark" : "light");
+  };
+
+  const currentColors = mode === "light" ? theme.lightColors : theme.darkColors;
+
+  if (!currentColors) {
+    return null;
+  }
+
+  const styles = StyleSheet.create({
+    scrollContainer: {
+      flex: 1,
+      padding: 15,
+      backgroundColor: currentColors.background,
+    },
+    container: {
+      flex: 1,
+      marginTop: 30,
+      padding: 2,
+    },
+    titleContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 8,
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: "bold",
+      color: currentColors.black,
+    },
+    subtitle: {
+      fontSize: 16,
+      color: currentColors.grey0,
+    },
+    subtitleContainer: {
+      flexDirection: "row",
+    },
+    separator: {
+      height: 1,
+      backgroundColor: currentColors.black,
+      marginVertical: 10,
+    },
+    categoryButton: {
+      backgroundColor: currentColors.primary,
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      marginRight: 10,
+      borderRadius: 5,
+    },
+    categoryText: {
+      color: currentColors.grey0,
+      fontWeight: "bold",
+    },
+    button: {
+      backgroundColor: currentColors.primary,
+      borderRadius: 20,
+      marginTop: 20,
+    },
+  });
+
   return (
-    <LinearGradient
-      colors={["rgba(58, 131, 244, 0.4)", "rgba(9, 181, 211, 0.4)"]}
-      style={{ flex: 1 }}
-    >
+    <ThemeProvider theme={theme}>
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
-          <FontAwesome6 name="bars" size={24} color="black" className="mb-3" />
+          <FontAwesome6
+            name="bars"
+            size={24}
+            color={currentColors.primary}
+            className="mb-3"
+            // onPress={}
+          />
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Hello There!</Text>
           </View>
@@ -35,58 +118,23 @@ export default function HomeScreen() {
           {categories.map((category) => (
             <TouchableOpacity
               key={category}
-              className="bg-blue-200 p-3 px-4 rounded-full mr-2"
+              style={{ backgroundColor: currentColors.primary }}
+              className="p-3 px-4 rounded-full mr-2"
             >
               <Text style={styles.categoryText}>{category}</Text>
             </TouchableOpacity>
           ))}
         </ScrollView>
+        <View className="mt-3">
+          <Button
+            onPress={toggleTheme}
+            buttonStyle={styles.button}
+            titleStyle={{ color: currentColors.grey0 }}
+          >
+            Switch to {mode === "light" ? "dark" : "light"} mode
+          </Button>
+        </View>
       </ScrollView>
-    </LinearGradient>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  scrollContainer: {
-    flex: 1,
-    padding: 15,
-  },
-  container: {
-    flex: 1,
-    marginTop: 30,
-    padding: 2,
-  },
-  titleContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#000",
-  },
-  subtitle: {
-    fontSize: 16,
-    color: "#666",
-  },
-  subtitleContainer: {
-    flexDirection: "row",
-  },
-  separator: {
-    height: 1,
-    backgroundColor: "black",
-    marginVertical: 10,
-  },
-  categoryButton: {
-    backgroundColor: "#007AFF",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    marginRight: 10,
-    borderRadius: 5,
-  },
-  categoryText: {
-    color: "black",
-    fontWeight: "bold",
-  },
-});
