@@ -9,3 +9,11 @@ In standard React Native, touch events are sent across the "bridge" to JavaScrip
 Gestures are best for **contextual actions** that feel natural to a thumb, like swiping a card to dismiss it or pinching a photo to zoom. They save screen real estate and make the app feel "premium." However, you should still provide buttons for critical actions (like "Delete") to ensure accessibility for users who may have motor-function difficulties.
 
 React Native is single-threaded for JavaScript. If you start a heavy API call or a massive Redux state update while a screen transition is happening, the animation will "drop frames" and stutter. `runAfterInteractions` allows you to queue that heavy work to start only after the user-facing animations are finished, keeping the UI silky smooth.
+
+### Code Snippet on React Native Components
+
+[settings.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/home/settings.tsx)
+
+### Output of Navigation:
+
+![Theme Mode](modesAnimation.jpg)
