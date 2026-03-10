@@ -20,4 +20,4 @@ Tools that can measure and monitor app performance:
 
 ### Output for Performance Optimization:
 
-![Performance Optimization](performance-output.png)
+![Performance Optimization](performance-output.jpg)
