@@ -3,17 +3,6 @@ import React from "react";
 import axiosInstance from "../../services/api";
 import { UserList } from "../UserList";
 
-/**
- * Unit Tests for UserList Component with Mocked API
- *
- * These tests demonstrate:
- * - Mocking API requests
- * - Testing loading states
- * - Testing success states with data
- * - Testing error states
- * - Async testing with waitFor
- */
-
 // Mock the axios instance
 jest.mock("../../services/api");
 const mockedAxios = axiosInstance as jest.Mocked<typeof axiosInstance>;
