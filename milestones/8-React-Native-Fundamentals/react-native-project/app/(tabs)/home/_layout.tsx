@@ -70,6 +70,16 @@ export default function HomeDrawerLayout() {
             ),
           }}
         />
+        <Drawer.Screen
+          name="addition"
+          options={{
+            drawerLabel: "Addition",
+            title: "Addition Demo",
+            drawerIcon: ({ color, size }) => (
+              <IconSymbol name="gearshape.fill" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
