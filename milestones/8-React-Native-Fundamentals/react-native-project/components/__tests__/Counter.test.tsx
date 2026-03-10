@@ -2,16 +2,6 @@ import { fireEvent, render, screen } from "@testing-library/react-native";
 import React from "react";
 import { Counter } from "../Counter";
 
-/**
- * Unit Tests for Counter Component
- *
- * These tests demonstrate:
- * - Rendering components
- * - Finding elements by testID
- * - Simulating user interactions (button presses)
- * - Asserting expected behavior
- */
-
 describe("Counter Component", () => {
   // Test 1: Component renders correctly
   it("renders the counter with initial count of 0", () => {
