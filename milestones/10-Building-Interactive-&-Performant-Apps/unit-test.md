@@ -396,3 +396,125 @@ describe("PostFetcher Component - API Mocking", () => {
 ### Output for Unit Testing on Mock API Calls:
 
 ![Mock API Calls](mock-api-calls.png)
+
+## Issue 72: Testing Redux with Jest
+
+The most challenging part was understanding how to test **Async Thunks**. Unlike simple reducers, thunks involve multiple "hidden" actions (pending, fulfilled, rejected). I had to learn that I wasn't testing the API call itself, but rather how my slice responds to the different stages of that API call. Setting up a "mock store" for integration tests was also a bit of a learning curve compared to simple unit tests.
+
+Redux tests are primarily **logic-based**, while component tests are **UI-based**. In a Redux test, I don't care about buttons, screens, or HTML tags; I only care about the data transformation. Redux tests are much faster and don't require the `render()` or `screen` utilities from React Testing Library. Component tests verify how a user sees the data, whereas Redux tests verify that the data itself is accurate.
+
+## Code Snippet on Mock API Calls
+
+**counterSlice.ts**
+
+```TypeScript
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  value: 0,
+};
+
+// Async thunk that waits 1 second then increments
+export const incrementAsync = createAsyncThunk(
+  "counter/incrementAsync",
+  async (amount: number) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    return amount;
+  },
+);
+
+export const counterSlice = createSlice({
+  name: "counter",
+  initialState,
+  reducers: {
+    increment: (state) => {
+      state.value++;
+    },
+    decrement: (state) => {
+      state.value--;
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+    },
+    reset: (state) => {
+      state.value = 0;
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(incrementAsync.fulfilled, (state, action) => {
+      state.value += action.payload;
+    });
+  },
+});
+
+export const { increment, decrement, incrementByAmount, reset } =
+  counterSlice.actions;
+
+export default counterSlice.reducer;
+```
+
+**counterSlice.test.tsx**
+
+```TypeScript
+import counterReducer, {
+    decrement,
+    increment,
+    incrementAsync,
+    incrementByAmount,
+    reset,
+} from "../../store/counterSlice";
+
+describe("Counter Reducer", () => {
+  const initialState = { value: 0 };
+
+  it("should return the initial state", () => {
+    expect(counterReducer(undefined, { type: "unknown" })).toEqual(
+      initialState,
+    );
+  });
+
+  it("should increment the value by 1", () => {
+    const previousState = { value: 0 };
+    const newState = counterReducer(previousState, increment());
+    expect(newState.value).toBe(1);
+  });
+
+  it("should handle async increment", () => {
+    const previousState = { value: 0 };
+    const action = incrementAsync.fulfilled(5, "requestId", 5);
+    const newState = counterReducer(previousState, action);
+    expect(newState.value).toBe(5);
+  });
+
+  it("should decrement the value by 1", () => {
+    const previousState = { value: 4 };
+    const newState = counterReducer(previousState, decrement());
+    expect(newState.value).toBe(3);
+  });
+
+  it("should reset the value by 0", () => {
+    const previousState = { value: 4 };
+    const newState = counterReducer(previousState, reset());
+    expect(newState.value).toBe(0);
+  });
+
+  it("should increment by a specific amount", () => {
+    const previousState = { value: 4 };
+    const newState = counterReducer(previousState, incrementByAmount(6));
+    expect(newState.value).toBe(10);
+  });
+
+  it("should handle multiple actions in sequence", () => {
+    let state = initialState;
+    state = counterReducer(state, increment());
+    state = counterReducer(state, increment());
+    state = counterReducer(state, incrementByAmount(5));
+    state = counterReducer(state, decrement());
+    expect(state.value).toBe(6);
+  });
+});
+```
+
+### Output for Unit Testing on Mock API Calls:
+
+![Counter Slice](counterSlice.png)
