@@ -80,6 +80,16 @@ export default function HomeDrawerLayout() {
             ),
           }}
         />
+        <Drawer.Screen
+          name="welcome"
+          options={{
+            drawerLabel: "Welcome",
+            title: "Welcome Message",
+            drawerIcon: ({ color, size }) => (
+              <IconSymbol name="gearshape.fill" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
