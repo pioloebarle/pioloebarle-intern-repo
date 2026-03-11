@@ -403,7 +403,7 @@ The most challenging part was understanding how to test **Async Thunks**. Unlike
 
 Redux tests are primarily **logic-based**, while component tests are **UI-based**. In a Redux test, I don't care about buttons, screens, or HTML tags; I only care about the data transformation. Redux tests are much faster and don't require the `render()` or `screen` utilities from React Testing Library. Component tests verify how a user sees the data, whereas Redux tests verify that the data itself is accurate.
 
-## Code Snippet on Mock API Calls
+## Code Snippet on Counter Slice Testing
 
 **counterSlice.ts**
 
@@ -515,6 +515,6 @@ describe("Counter Reducer", () => {
 });
 ```
 
-### Output for Unit Testing on Mock API Calls:
+### Output for Unit Testing on Mock Counter Slice Testing:
 
 ![Counter Slice](counterSlice.png)
