@@ -395,4 +395,4 @@ describe("PostFetcher Component - API Mocking", () => {
 
 ### Output for Unit Testing on Mock API Calls:
 
-[Mock API Calls](mock-api-calls.png)
+![Mock API Calls](mock-api-calls.png)
