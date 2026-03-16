@@ -16,5 +16,6 @@ In your terminal run this following command:
 
 [TestAPI.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/components/TestAPI.jsx)
 
-### TestAPI.jsx Output:
+### TestAPI.jsx Output
+
 ![axiosTest](axiosTest.png)

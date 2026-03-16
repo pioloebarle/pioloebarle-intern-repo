@@ -11,6 +11,7 @@ The difference between stack, tab and drawer navigators are:
 It uses native-driven animations to slide or fade screens. On iOS, stacks usually slide from the right, while on Android, they often fade or slide upward. Because it uses `react-native-screens`, these transitions are offloaded to the native UI thread, keeping them smooth at 60 FPS.
 
 Deep linking allows a URL to open a specific screen in the app. For example, `myapp://profile/123` could open the profile screen for user ID 123. To implement this:
+
 1. Define a prefix
 2. Create a linking configuration that maps URL paths to screens
 3. Pass the linking configuration to the `NavigationContainer`
@@ -24,7 +25,7 @@ Deep linking allows a URL to open a specific screen in the app. For example, `my
 
 [_layout.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/home/_layout.tsx)
 
-### Output of Navigation:
+### Output of Navigation
 
 <div style="display: flex; gap: 10px;">
   <img src="home.jpg" alt="Home Screen" width="30%" />

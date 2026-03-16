@@ -14,6 +14,6 @@ React Native is single-threaded for JavaScript. If you start a heavy API call or
 
 [settings.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/home/settings.tsx)
 
-### Output of Navigation:
+### Output of Navigation
 
 ![Theme Mode](modesAnimation.jpg)

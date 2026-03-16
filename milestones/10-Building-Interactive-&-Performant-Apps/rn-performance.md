@@ -7,6 +7,7 @@ The most common issues include **unnecessary re-renders** (often caused by anony
 `useMemo` improves performance by caching the result of a calculation, so it isn't repeated unless its inputs change. `useCallback` caches the function definition itself, ensuring that a child component (wrapped in `React.memo`) doesn't re-render simply because a parent re-rendered and created a "new" function in memory. Both reduce the workload on the JavaScript thread and minimize Bridge traffic.
 
 Tools that can measure and monitor app performance:
+
 * **React DevTools Profiler**: Visualizes which components are rendering and why.
 * **Performance Monitor (built-in)**: Shows the current FPS for both the JS and UI threads (access via the Shake menu).
 * **Flipper**: A powerful desktop app that lets you inspect network traffic, layout, and even database performance.
@@ -18,6 +19,6 @@ Tools that can measure and monitor app performance:
 
 [PerformanceDemo.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/components/PerformanceDemo.tsx)
 
-### Output for Performance Optimization:
+### Output for Performance Optimization
 
 ![Performance Optimization](performance-output.jpg)

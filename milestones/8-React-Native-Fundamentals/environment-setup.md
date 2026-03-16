@@ -22,5 +22,6 @@ In your terminal run this following command:
 
 Download the Expo Go app on your phone and scan the QR code to run the app on your device. And then you can start editing the `index.tsx` file to see your changes in real-time on your phone.
 
-### Output:
+### Output
+
 ![Expo](expo.jpg)

@@ -1,10 +1,11 @@
 # Milestone 7: Redux
 
-## Issue 63: Introduction to Redux Toolkit 
+## Issue 63: Introduction to Redux Toolkit
 
 Use `useState` for state that is **local** to a single component and doesn't need to be shared. One example is "show more" toggle or a temporary form input.
 
 Use **Redux** when:
+
 1. **State is shared**: Multiple components across different levels of the component tree need access to the same state. For example, theme settings or User Profile data needed in both the Navbar and the User Dashboard.
 2. **Complex state logic**: When the state management involves complex logic, such as deeply nested updates or when the next state depends on the previous state. Redux's immutability and pure functions can help manage this complexity.
 3. **Persistence**: You want a predictable way to track state changes over time or easily sync state with `localStorage`.
@@ -24,10 +25,11 @@ In your terminal run this following command:
 
 [Store.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/redux/Store.jsx)
 
-### Counter.jsx Output:
+### Counter.jsx Output
+
 ![Counter](counterRedux.png)
 
-## Issue 64: Using Selectors in Redux Toolkit 
+## Issue 64: Using Selectors in Redux Toolkit
 
 These are the benefits of using selectors in Redux Toolkit:
 
@@ -44,5 +46,6 @@ These are the benefits of using selectors in Redux Toolkit:
 
 [CounterSlice.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/redux/slices/CounterSlice.jsx)
 
-### Counter.jsx Output:
+### Counter.jsx Output
+
 ![Counter](counterReduxStatus.png)

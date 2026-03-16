@@ -12,7 +12,8 @@ The benefits of using `Stylesheet.create()` over inline styles are:
 
 3. **Validation**: `StyleSheet.create()` provides validation and warnings for invalid style properties, which can help catch errors early in development.
 
-Instead of using fixed pixel values, I would use a combination of: 
+Instead of using fixed pixel values, I would use a combination of:
+
 * **Flexbox**: To allow elements to grow and shrink proportionally.
 * **Percentage-based dimensions**: To make elements scale relative to their parent container.
 * **useWindowDimensions**: To write conditional logic for "breakpoints" based on the device's screen size.
@@ -22,7 +23,7 @@ Instead of using fixed pixel values, I would use a combination of:
 
 [index.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/index.tsx)
 
-### Output of Light and Dark Modes:
+### Output of Light and Dark Modes
 
 <div style="display: flex; gap: 10px;">
   <img src="light-mode.jpg" alt="Light Mode" width="45%" />

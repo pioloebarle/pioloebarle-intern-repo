@@ -8,5 +8,6 @@ I ask a colleague when the problem is tied to "institutional knowledge". For exa
 
 The biggest challenge is **"Tunnel Vision"**. When I'm deeply focused on a problem, I can become fixated on a specific solution or approach, which can blind me to alternative explanations or fixes. This can lead to spending a lot of time trying to solve the wrong problem. To overcome this, I set a timer for 15 minutes when I start debugging. If I haven't found a solution by then, I take a step back, clear my mind, and try to look at the problem from a different angle. This might involve changing my environment (like going for a walk), discussing the issue with a colleague, or even just taking a break before returning with fresh eyes. Troubleshooting alone also carries the risk of "Rabbit Holing"—where you try to fix one small error and end up changing ten unrelated things, making the original problem even harder to find.
 
-### Decision-Making Framework for Debugging:
+### Decision-Making Framework for Debugging
+
 ![Framwork](decision-making-framework.jpg)

@@ -18,7 +18,6 @@ A **Unit Test** checks a small, isolated piece of code (like a single math funct
 
 [UserList.test.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/components/__tests__/UserList.test.tsx)
 
-
-### Output for Unit Testing and Integration Testing:
+### Output for Unit Testing and Integration Testing
 
 ![Unit Testing and Integration Testing](output-rn-issue-23.png)

@@ -72,12 +72,12 @@ npm test Counter.test
 
 ## 📖 Understanding the Counter Tests
 
-### What the Counter component does:
+### What the Counter component does
 
 - Shows a number (count)
 - Has buttons to: increment (+), decrement (-), and reset
 
-### What we test:
+### What we test
 
 ```typescript
 // 1. Does it render correctly?
@@ -93,7 +93,7 @@ it('decrements count when - button is pressed', () => { ... });
 it('resets count to 0 when reset button is pressed', () => { ... });
 ```
 
-### Key Testing Concepts:
+### Key Testing Concepts
 
 - **`render()`** - Renders the component for testing
 - **`screen.getByTestId()`** - Finds elements by testID prop
@@ -104,13 +104,13 @@ it('resets count to 0 when reset button is pressed', () => { ... });
 
 ## 📖 Understanding the UserList Tests (with Mocked API)
 
-### What the UserList component does:
+### What the UserList component does
 
 - Fetches users from an API
 - Shows loading spinner while fetching
 - Displays users or error message
 
-### What we test:
+### What we test
 
 ```typescript
 // 1. Shows loading state
@@ -126,7 +126,7 @@ it('displays error message when API call fails', async () => { ... });
 it('displays empty state when API returns empty array', async () => { ... });
 ```
 
-### Key Mocking Concepts:
+### Key Mocking Concepts
 
 - **`jest.mock()`** - Mocks an entire module (like the API)
 - **`mockResolvedValueOnce()`** - Mocks successful API response

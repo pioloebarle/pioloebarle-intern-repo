@@ -5,6 +5,7 @@
 Metro acts as the central hub for the development process. It provides real-time feedback by displaying JavaScript errors and console logs directly in the terminal. More importantly, it manages **Fast Refresh**, which allows me to see the effects of my code changes instantly. If a syntax error occurs, Metro provides a clear stack trace that points to the exact file and line number that caused the crash.
 
 Flipper is a powerful, extensible platform that offers a wide range of native-level debugging tools. Its key features include:
+
 * **Network Inspector**: To view all API traffic.
 * **Layout Inspector**: To see the native view hierarchy (beyond just the React components).
 * **Database Browser**: To inspect local storage like SQLite or Realm.
@@ -19,7 +20,7 @@ The most reliable way is using **Flipper's Network Plugin**, which captures traf
 
 [DebuggingExample.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/components/DebuggingExample.tsx)
 
-### Output for Unit Testing on Mock Counter Slice Testing:
+### Output for Unit Testing on Mock Counter Slice Testing
 
 ![debug](debug-output.jpg)
 

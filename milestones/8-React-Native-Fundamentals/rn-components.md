@@ -16,6 +16,6 @@ Source: [NativeWind Documentation Installation Guide](https://www.nativewind.dev
 
 [index.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/app/(tabs)/index.tsx)
 
-### Output of React Native Components:
+### Output of React Native Components
 
 ![React Native Components](rnComponents.jpg)

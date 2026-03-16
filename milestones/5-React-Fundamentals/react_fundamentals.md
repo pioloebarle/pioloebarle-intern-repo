@@ -79,7 +79,7 @@ The common issues with Lists in React are:
 
 ![List](list.png)
 
-### Code Snippet for list 
+### Code Snippet for list
 
 ```Javascript
 import './App.css'
@@ -148,8 +148,10 @@ In your terminal run this following command:
 
 [App.jsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/5-React-Fundamentals/react-project/src/App.jsx)
 
-### Home.jsx Output:
+### Home.jsx Output
+
 ![Home](home.png)
 
-### Profile.jsx Output:
+### Profile.jsx Output
+
 ![Profile](profile.png)

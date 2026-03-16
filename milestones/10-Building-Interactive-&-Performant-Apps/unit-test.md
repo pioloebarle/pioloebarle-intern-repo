@@ -16,7 +16,7 @@ Finally, adopting a "testing mindset" proved difficult, as I had to learn how to
 
 [AdditionCalculator.test.tsx](https://github.com/pioloebarle/pioloebarle-intern-repo/blob/main/milestones/8-React-Native-Fundamentals/react-native-project/components/__tests__/AdditionCalculator.test.tsx)
 
-### Output for Unit Testing and Integration Testing:
+### Output for Unit Testing and Integration Testing
 
 ![Unit Testing](addition-calculator.png)
 
@@ -123,7 +123,7 @@ describe("WelcomeMessage Component", () => {
 });
 ```
 
-### Output for Unit Testing and Integration Testing:
+### Output for Unit Testing and Integration Testing
 
 ![Unit Testing](welcome-message.png)
 
@@ -393,7 +393,7 @@ describe("PostFetcher Component - API Mocking", () => {
 });
 ```
 
-### Output for Unit Testing on Mock API Calls:
+### Output for Unit Testing on Mock API Calls
 
 ![Mock API Calls](mock-api-calls.png)
 
@@ -515,6 +515,6 @@ describe("Counter Reducer", () => {
 });
 ```
 
-### Output for Unit Testing on Mock Counter Slice Testing:
+### Output for Unit Testing on Mock Counter Slice Testing
 
 ![Counter Slice](counterSlice.png)
