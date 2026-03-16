@@ -90,6 +90,16 @@ export default function HomeDrawerLayout() {
             ),
           }}
         />
+        <Drawer.Screen
+          name="debugging"
+          options={{
+            drawerLabel: "Debugging",
+            title: "Debugging Example",
+            drawerIcon: ({ color, size }) => (
+              <IconSymbol name="gearshape.fill" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
