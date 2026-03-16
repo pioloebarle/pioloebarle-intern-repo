@@ -1,0 +1,43 @@
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: @rneui/base@5.0.0
+npm error Found: @testing-library/react-native@12.9.0
+npm error node_modules/@testing-library/react-native
+npm error   peerOptional @testing-library/react-native@">= 12.0.0" from expo-router@6.0.23
+npm error   node_modules/expo-router
+npm error     peerOptional expo-router@"*" from @expo/cli@54.0.23
+npm error     node_modules/expo/node_modules/@expo/cli
+npm error       @expo/cli@"54.0.23" from expo@54.0.33
+npm error       node_modules/expo
+npm error         peerOptional expo@"*" from @expo/metro-config@54.0.14
+npm error         node_modules/@expo/metro-config
+npm error         20 more (@expo/metro-runtime, @expo/prebuild-config, @expo/ui, ...)
+npm error     expo-router@"~6.0.23" from the root project
+npm error   dev @testing-library/react-native@"^12.4.3" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer @testing-library/react-native@"^13.2.0" from @rneui/base@5.0.0
+npm error node_modules/@rneui/base
+npm error   peer @rneui/base@"5.0.0" from @rneui/themed@5.0.0
+npm error   node_modules/@rneui/themed
+npm error     @rneui/themed@"^5.0.0" from the root project
+npm error   @rneui/base@"^5.0.0" from the root project
+npm error
+npm error Conflicting peer dependency: @testing-library/react-native@13.3.3
+npm error node_modules/@testing-library/react-native
+npm error   peer @testing-library/react-native@"^13.2.0" from @rneui/base@5.0.0
+npm error   node_modules/@rneui/base
+npm error     peer @rneui/base@"5.0.0" from @rneui/themed@5.0.0
+npm error     node_modules/@rneui/themed
+npm error       @rneui/themed@"^5.0.0" from the root project
+npm error     @rneui/base@"^5.0.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\John Benedict\AppData\Local\npm-cache\_logs\2026-03-16T05_16_44_967Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\John Benedict\AppData\Local\npm-cache\_logs\2026-03-16T05_16_44_967Z-debug-0.log

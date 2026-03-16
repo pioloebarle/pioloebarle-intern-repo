@@ -10,7 +10,7 @@ import {
 import axiosInstance from "../services/api";
 import { log } from "../utils/debugLogger";
 
-export const DebuggingExample = () => {
+export default function DebuggingExample() {
   const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [debugInfo, setDebugInfo] = useState("Ready to debug");
@@ -124,7 +124,7 @@ export const DebuggingExample = () => {
       )}
     </ScrollView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -222,5 +222,3 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-
-export default DebuggingExample;

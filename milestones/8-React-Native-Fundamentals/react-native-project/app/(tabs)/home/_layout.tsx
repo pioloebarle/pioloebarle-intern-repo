@@ -100,6 +100,20 @@ export default function HomeDrawerLayout() {
             ),
           }}
         />
+        <Drawer.Screen
+          name="errorSimulator"
+          options={{
+            drawerLabel: "Error Simulator",
+            title: "Error Simulator",
+            drawerIcon: ({ color, size }) => (
+              <IconSymbol
+                name="exclamationmark.triangle.fill"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );

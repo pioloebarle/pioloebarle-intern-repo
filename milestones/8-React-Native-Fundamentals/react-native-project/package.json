@@ -22,6 +22,7 @@
     "@reduxjs/toolkit": "^2.11.2",
     "@rneui/base": "^5.0.0",
     "@rneui/themed": "^5.0.0",
+    "@sentry/react-native": "^7.2.0",
     "axios": "^1.13.6",
     "axios-retry": "^4.5.0",
     "expo": "~54.0.33",
