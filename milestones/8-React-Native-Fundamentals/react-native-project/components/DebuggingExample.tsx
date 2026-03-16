@@ -1,3 +1,4 @@
+import networkDebugger from "@/utils/networkDebugger";
 import React, { useEffect, useState } from "react";
 import {
     ScrollView,
@@ -8,7 +9,6 @@ import {
 } from "react-native";
 import axiosInstance from "../services/api";
 import { log } from "../utils/debugLogger";
-import networkDebugger from "../utils/networkDebugger";
 
 export const DebuggingExample = () => {
   const [posts, setPosts] = useState<any[]>([]);

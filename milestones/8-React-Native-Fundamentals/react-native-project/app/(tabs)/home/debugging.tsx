@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-named-as-default
 import DebuggingExample from "@/components/DebuggingExample";
 import { ScrollView } from "react-native";
 
