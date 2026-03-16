@@ -16,6 +16,24 @@ export const unstable_settings = {
   anchor: "(tabs)",
 };
 
+export const linking = {
+  prefixes: ["reactnativeproject://", "https://reactnativeproject.com"],
+  config: {
+    screens: {
+      "(tabs)": {
+        screens: {
+          "home/index": "home",
+          "home/debugging": "debugging",
+          "home/errorSimulator": "error",
+          "home/deeplink": "deeplink",
+        },
+      },
+      modal: "modal",
+      "facebook-profile": "facebook/:id",
+    },
+  },
+};
+
 export default function RootLayout() {
   const colorScheme = useColorScheme();
 
@@ -25,11 +43,17 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="modal"
-          options={{ presentation: "modal", title: "Modal" }}
+          options={{
+            presentation: "modal",
+          }}
         />
       </Stack>
       <StatusBar style="auto" />
