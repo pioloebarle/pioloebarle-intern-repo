@@ -124,6 +124,16 @@ export default function HomeDrawerLayout() {
             ),
           }}
         />
+        <Drawer.Screen
+          name="translation"
+          options={{
+            drawerLabel: "Translation",
+            title: "Translation Demo",
+            drawerIcon: ({ color, size }) => (
+              <IconSymbol name="gearshape.fill" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
