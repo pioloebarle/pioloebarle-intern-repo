@@ -1,8 +1,10 @@
-/**
- * Error Simulator Screen
- * Displays the ErrorSimulator component
- */
+import ErrorSimulator from "@/components/ErrorSimulator";
+import { ScrollView } from "react-native";
 
-import ErrorSimulator from "../../../components/ErrorSimulator";
-
-export default ErrorSimulator;
+export default function AdditionScreen() {
+  return (
+    <ScrollView contentContainerStyle={{ padding: 20 }}>
+      <ErrorSimulator />
+    </ScrollView>
+  );
+}
